@@ -17,7 +17,7 @@ SELECT * FROM airportsNew
 INSERT INTO airportsNew VALUES
 (
 	'airportB',
-	(SELECT ABS(an1.elev - an2.elev)/2 FROM airportsNew as an1, airportsNew as an2 WHERE an1.name='ATKA' AND an2.name='ANNETTE ISLAND'),
+	(SELECT ABS(an1.elev - an2.elev)/2 FROM airportsNew as an1, airportsNew as an2 WHERE an1.name='NOATAK' AND an2.name='NIKOLSKI AS'),
 	ST_MakePoint(
 		(SELECT ST_X(an1.geom)-((ST_X(an1.geom)-ST_X(an2.geom))/2) FROM airportsNew as an1, airportsNew as an2 WHERE an1.name='NOATAK' AND an2.name='NIKOLSKI AS'),
 		(SELECT ST_Y(an1.geom)-((ST_Y(an1.geom)-ST_Y(an2.geom))/2) FROM airportsNew as an1, airportsNew as an2 WHERE an1.name='NOATAK' AND an2.name='NIKOLSKI AS')
