@@ -1,0 +1,13 @@
+curl --ssl-no-revoke -X POST "https://api.mapbox.com/uploads/v1/piotrzycki/credentials?access_token=sk.eyJ1IjoicGlvdHJ6eWNraSIsImEiOiJjbHJkZThld2YxNXVmMmxtd2F2MmF4YXZiIn0.hlrQXP7Gp4ws718ilS9grA"
+
+$env:AWS_ACCESS_KEY_ID="ASIATNLVGLR2IOUYRCAD"
+$env:AWS_SECRET_ACCESS_KEY="qaVMmk18V1bgXjMvJLmtDOOWODSZ5VEXdUjO8JQV"
+$env:AWS_SESSION_TOKEN="FwoGZXIvYXdzEN3//////////wEaDJlLTDFogUi7K7LLUSKaAlCiKnGw+yS0CsZ6D46KOmZcVjuEy5nR9ZQ6BjP8dDaOaOXj+vb9kbSuGShCthwYnbyxtCsdL1g9zkFj4I2Wu7OnZcE8qudvMI2lpIsmtFZmOmw1tZQRo5pVCV8/gQ0lb5ESO+Ls7vwvp9jiLz7UxWZzAbNXMTqfyZp1bVmzhO1wVyOI2zfXGQNsM9bGQS3cN6Ew85KuJi5jEjmqp/aaFVIk7DZJDjcVFc6XPCc0PqD5d7X9vb7gVMmUIhwhthxLt2dT9ly2xAyTqnfnwLZwnAvhERzE3GK6ANfXFRzKCfDGPY1i/fGQ30i8yhMlnlBsW7jAN+q6k5coZB1E3Uww+o2rKGKorCdcsc7cUGoYIv4cJKOazAoY1UfqwCjCgo+tBjIpFD0+QSLhzrBGdTle70ff6oFXVWCwXJpftYG7nU37lvilb5TSSxWCksQ="
+
+aws s3 cp "D:\Studia\Semestr V\bazy\cw11\T2019_KAR_POI_TABLE.zip" s3://tilestream-tilesets-production/1c/_pending/0w1w9vjvemv1jyg01w0bedrlc/piotrzycki --region eu-north-1
+
+curl --ssl-no-revoke -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
+  "url": "http://tilestream-tilesets-production.s3.amazonaws.com/1c/_pending/0w1w9vjvemv1jyg01w0bedrlc/piotrzycki",
+  "tileset": "piotrzycki.T2019_KAR_POI_TABLE",
+  "name": "T2019_KAR_POI_TABLE"
+}' 'https://api.mapbox.com/uploads/v1/piotrzycki?access_token=sk.eyJ1IjoicGlvdHJ6eWNraSIsImEiOiJjbHJkZThld2YxNXVmMmxtd2F2MmF4YXZiIn0.hlrQXP7Gp4ws718ilS9grA'
