@@ -1,0 +1,26 @@
+Name:
+Webhook - cw10 from Dashboards - be975ea2-711a-573c-808f-08bb0adf923b
+
+Token:
+add71aa384ec7b1dea154381257945b3938a9770
+
+Description:
+Allow users to run Dashboards/cw10 without logging in
+
+Created Date:
+2024-01-19T20:30:10.547Z
+
+Expiration Date:
+2025-01-18T23:00:00.000Z
+
+Enabled:
+true
+
+Authorization with Header:
+http://DESKTOP-4A7E8OM:8081/fmedatadownload/Dashboards/cw10.fmw?email=peter141050%40gmail.com&password=&client_email=peter141050%40gmail.com&county=powiat%20zdu%C5%84skowolski&cloud_coverage=50&starting_date=20230723000000&ending_date=20230730000000&SourceDataset_SHAPEFILE=%22D%3A%5CStudia%5CSemestr%20V%5Cbazy%5Ccw10%5Cpowiaty%5Cpowiaty.shp%22&DestDataset_GEOTIFF=D%3A%5CStudia%5CSemestr%20V%5Cbazy%5Ccw10&opt_showresult=false&opt_servicemode=sync
+Header Key: Authorization
+Header Value: fmetoken token=add71aa384ec7b1dea154381257945b3938a9770
+
+Authorization with Query String:
+http://DESKTOP-4A7E8OM:8081/fmedatadownload/Dashboards/cw10.fmw?email=peter141050%40gmail.com&password=&client_email=peter141050%40gmail.com&county=powiat%20zdu%C5%84skowolski&cloud_coverage=50&starting_date=20230723000000&ending_date=20230730000000&SourceDataset_SHAPEFILE=%22D%3A%5CStudia%5CSemestr%20V%5Cbazy%5Ccw10%5Cpowiaty%5Cpowiaty.shp%22&DestDataset_GEOTIFF=D%3A%5CStudia%5CSemestr%20V%5Cbazy%5Ccw10&opt_showresult=false&opt_servicemode=sync&token=add71aa384ec7b1dea154381257945b3938a9770
+
